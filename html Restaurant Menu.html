@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Menu (˶ᵔ ᵕ ᵔ˶)</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <style>
+
+        body {background-color: #C5AC82;
+        }
+
+        .container {
+        position: relative;
+        text-align: center;
+        }
+
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .top-left {
+        position: fixed;
+        top: 8px;
+        left: 16px;
+        color:#FFC300;
+        font-family: Verdana, sans-serif;
+        font-size: 3vw;
+        border-radius: 16px;
+        border: solid 2px #FFC300;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picleft1 {
+        position: absolute;
+        top: 46%;
+        left: 0%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picleft2 {
+        position: absolute;
+        top: 10%;
+        left: 11%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picright3 {
+        position: absolute;
+        top: 6%;
+        right: 6%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picright4 {
+        position: absolute;
+        top: 76%;
+        right: -3%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picright5 {
+        position: absolute;
+        top: 30%;
+        right: 4%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picright6 {
+        position: absolute;
+        top: 6%;
+        right: 4%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picleft7 {
+        position: absolute;
+        top: 53%;
+        right: -1%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .picleft8 {
+        position: absolute;
+        top: 20%;
+        left: 6%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .centered h3 {
+        font-size: 3.5vw;
+        margin:0;
+        color:#FFC300;
+        font-family: Verdana, sans-serif;
+        }
+
+        .centered h6 {
+        font-size: 7.5vw;
+        margin:0;
+        color: #DBCBB1;
+        font-family: 'Varela Round';
+        }
+
+        .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        border-radius: 30px;
+        font-size: 2vw;
+        font-family: 'Varela Round';
+        }
+
+        .sidenav a {
+        padding: 4px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.6s;
+        border-radius: 30px;
+        font-size: 1.5vw;
+        font-family: 'Varela Round';
+        }
+
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 3vw;
+        margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+        .fa-instagram {
+        color: white;
+        background: #9BC582;
+        }   
+
+        .fa-pinterest {
+        background: #BDC582;
+        color: white;
+        }
+
+        .fa-facebook {
+        background: #82C58B;
+        color: white;
+        }
+
+        .fa-emoj {
+        font-family: 'Varela Round';
+        color: white;
+        }
+
+        .fa {
+        padding: 1vw;
+        font-size: 3vw;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20%;
+        }
+
+        .mix {
+        padding: 1vw;
+        font-size: 3vw;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 30%;
+        }
+
+        .fa:hover {
+        opacity: 0.7;
+        }
+
+        img.cas {
+        border-radius: 30px;
+        }
+
+        .top {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .top h2 {
+        font-size: 3vw;
+        font-family: Verdana, sans-serif;
+        color: #FFC300;
+        margin: 3vw;
+        }
+
+        .top h1 {
+        font-size: 2vw;
+        font-family: 'Varela Round';
+        color: #FFE99F;
+        margin-bottom: 3vw;
+        text-align: center;
+        }
+
+        .yowaimo {
+        font-size: 1.5vw;
+        text-align: center;
+        color: #f1f1f1;
+        font-family: 'Varela Round';
+        }
+
+        #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        margin: -76px 0 0 -76px;
+        border: 16px solid #f1f1f1;
+        border-radius: 50%;
+        border-top: 16px solid #FFC300;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom { 
+        from{ bottom:-100px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+        }
+
+        #myDiv {
+        display: none;
+        text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+    
+    <!-- by NOAH DE BELEN of 9-SAMAT -->
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+
+        <div id="mySidenav" class="sidenav" style="text-align: left;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="html Restaurant Homepage.html"><i class="fa fa-home" style="font-size: 2vw;"></i>ホームページ</a>
+        <a href="html Restaurant Menu.html"><i class="fa fa-folder" style="font-size: 2vw;"></i>Menu (˶ᵔ ᵕ ᵔ˶)</a>
+        <a href="html Restaurant Clients.html"><i class="fa fa-heart" style="font-size: 2vw;"></i>Clients (˘▾˘)</a>
+        <a href="html Restaurant Feedback.html"><i class="fa fa-pencil" style="font-size: 2vw;"></i>Feedback (*^.^*)</a>
+    </div>
+      
+
+    <div class="container">
+        <img src="images/pexels-ivan-samkov-8951181.jpg" style="width: 100%;" class="cas">
+        <div class="centered" font-size-adjust: 3;><h3>Our おいしい本物の</h3><h6>日本語 MENU</h6></div>
+        <div class="top-left"><span style="cursor:pointer" onclick="openNav()">&#9776; 開ける</span></div>
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        var myVar;
+
+        function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+        }
+
+    </script>
+        
+    <hr style="margin: 2vw;">
+
+    <div class="container">
+        <img src="images/david-lundgren-wfep8c6OfVs-unsplash.jpg" style="width: 100%;" class="cas">
+        <div class="top-left"><span style="cursor:pointer" onclick="openNav()">&#9776; 開ける</span></div>
+        <div class="top" font-size-adjust: 3; style="border-left: 1.5vw solid #9BC582;">
+            <h2>NIGIRI にぎり! (´ ∀ ` *)</h2>
+            <h1>
+                <b>✦₊ ⟡</b> Tamago Nigiri - - - - - PHP 107<br><br>
+                <b>✦₊ ⟡</b> Kani Nigiri - - - - - PHP 131<br><br>
+                Ebi Nigiri - - - - - PHP 107<br><br>
+                <b>✦₊ ⟡</b> Salmon Nigiri - - - - - PHP 143<br><br>
+                Tuna Nigiri - - - - - PHP 143<br><br>
+            </h1>
+            <h2>SUSHI 寿 司 ! (*^ ω ^)</h2>
+            <h1>
+                <b>✦₊ ⟡</b> California Roll - - - - - PHP 203<br><br>
+                <b>✦₊ ⟡</b> Philadelphia Roll - - - - - PHP 347<br><br>
+                Salmon Avocado - - - - - PHP 299<br><br>
+                Volcano Roll - - - - - PHP 407<br><br>
+                <b>✦₊ ⟡</b> Seafood Crunch Roll - - - - - PHP 347<br><br>
+                Spicy Kani Maki - - - - - PHP 155<br><br>
+                <b>✦₊ ⟡</b> Salmon Maki - - - - - PHP 203<br><br>
+                <b>✦₊ ⟡</b> Tuna Maki - - - - - PHP 203<br><br>
+            </h1>
+            <h2>DONBURI 丼 鉢 ! (◡‿◡*)</h2>
+            <h1>
+                Salmon Poke - - - - - PHP 407<br><br>
+                Tuna Poke - - - - - PHP 407<br><br>
+                <b>✦₊ ⟡</b> Cheesy Gyudon - - - - - PHP 419<br><br>
+                Salmon Don - - - - - PHP 395<br><br>
+                Tekka (Tuna) Don - - - - - PHP 407<br><br>
+                <b>✦₊ ⟡</b> Katsudon - - - - - PHP 419<br><br>
+                <b>✦₊ ⟡</b> Salmon Tuna Don - - - - - PHP 419<br><br>
+            </h1>
+            <h1 style="color: #f1f1f1; margin-bottom: 0%;">(ﾉ ◕ ヮ ◕ )ﾉ * : ･ﾟ ✧</h1>
+        </div>
+        <div class="picleft1"><img src="images/xavier-chng-KwGoCJGwbCs-unsplash.jpg" style="width: 100%;"></div>
+        <div class="picleft2"><img src="images/felippe-lopes-EUf-J5PDIcI-unsplash.jpg" style="width: 110%;"></div>
+        <div class="picright3"><img src="images/airam-dato-on-zFRn0okB5aw-unsplash.jpg" style="width: 110%;"></div>
+        <div class="picright4"><img src="images/istockphoto-1358027722-612x612.jpg" style="width: 83%;"></div>
+        <div class="picright5"><img src="images/istockphoto-513940516-612x612.jpg" style="width: 73%;"></div>
+    </div>
+
+    <hr style="margin: 2vw;">
+
+    <div class="container">
+        <img src="images/jet-dela-cruz-E5JGJjgADGE-unsplash.jpg" style="width: 100%;" class="cas">
+        <div class="top-left"><span style="cursor:pointer" onclick="openNav()">&#9776; 開ける</span></div>
+        <div class="top" font-size-adjust: 3; style="border-left: 1.5vw solid #9BC582;">
+            <h2>PLATTERS 大皿! ♡(>ᴗ•)</h2>
+            <h1>
+                <b>✦₊ ⟡</b> Salmon 刺身 - - - - - PHP 990<br><br>
+                Tuna 刺身 - - - - - PHP 980<br><br>
+                <b>✦₊ ⟡</b> Sashimi セット - - - - - PHP 990<br><br>
+                <b>✦₊ ⟡</b> Sushi 箱 - - - - - PHP 2400<br><br>
+            </h1>
+            <h2>BOBA ボバ! (//▽//)</h2>
+            <h1>
+                <b>✦₊ ⟡</b> Classic ミルクティー - - - - - PHP 210<br><br>
+                <b>✦₊ ⟡</b> Jasmine ミルクティー - - - - PHP 215<br><br>
+                Taro ミルクティー - - - - - PHP 199<br><br>
+                Vanilla ミルクティー - - - - - PHP 199<br><br>
+                Mango ミルクティー - - - - - PHP 220<br><br>
+                Mocha ミルクティー - - - - - PHP 210<br><br>
+                <b>✦₊ ⟡</b> Brown Sugar ミルクティー - - PHP 215<br><br>
+            </h1>
+            <h2>EXTRA アドオン! (^w~)☆</h2>
+            <h1>
+                Brown Sugar Boba - - - - - PHP 20<br><br>
+                Mango Popping Boba - - - - - PHP 25<br><br>
+                Coffee Jelly - - - - - PHP 20<br><br>
+            </h1>
+            <h1 style="color: #f1f1f1; margin-bottom: 0%;">(っ ´ w ` )ﾉ ( ╥ ω ╥ )</h1>
+        </div>
+        <div class="picright6"><img src="images/mahmoud-fawzy-n1DePkKznLY-unsplash.jpg" style="width: 100%;"></div>
+        <div class="picleft7"><img src="images/istockphoto-1444027658-612x612.jpg" style="width: 100%;"></div>
+        <div class="picleft8"><img src="images/istockphoto-636968538-612x612.jpg" style="width: 70%;"></div>
+    </div>
+
+    <hr style="margin: 2vw; margin-bottom: 0;">
+
+
+    <!-- end (mkns) -->
+
+
+    <h1 class="yowaimo">Σ>―(〃°ω°〃)♡→<br>⟟ 位置 : Shibuya City, Tokyo, Japan<br>問い合わせ : sushkawaiii@gmail.com<br>電話番号 : #1357-924-6802</h1>
+    
+    <div class="yowaimo">
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        <a href="#" class="fa fa-facebook"></a>
+    </div>
+
+    </div>
+
+</body>
+
+</html>

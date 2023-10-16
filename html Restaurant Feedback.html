@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Feedback (*'-'*)</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <style>
+
+        body {background-color: #C5AC82;
+        }
+
+        .container {
+        position: relative;
+        text-align: center;
+        }
+
+        .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .top-left {
+        position: fixed;
+        top: 8px;
+        left: 16px;
+        color:#FFC300;
+        font-family: Verdana, sans-serif;
+        font-size: 3vw;
+        border-radius: 16px;
+        border: solid 2px #FFC300;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        }
+
+        .centered h3 {
+        font-size: 3.5vw;
+        margin:0;
+        color:#FFC300;
+        font-family: Verdana, sans-serif;
+        }
+
+        .centered h6 {
+        font-size: 7.5vw;
+        margin:0;
+        color: #DBCBB1;
+        font-family: 'Varela Round';
+        }
+
+        .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        border-radius: 30px;
+        font-size: 2vw;
+        font-family: 'Varela Round';
+        }
+
+        .sidenav a {
+        padding: 4px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.6s;
+        border-radius: 30px;
+        font-size: 1.5vw;
+        font-family: 'Varela Round';
+        }
+
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 3vw;
+        margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+
+        .fa-instagram {
+        color: white;
+        background: #9BC582;
+        }   
+
+        .fa-pinterest {
+        background: #BDC582;
+        color: white;
+        }
+
+        .fa-facebook {
+        background: #82C58B;
+        color: white;
+        }
+
+        .fa-emoj {
+        font-family: 'Varela Round';
+        color: white;
+        }
+
+        .fa-spac {
+        }
+
+        .fa {
+        padding: 1vw;
+        font-size: 3vw;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20%;
+        }
+
+        .fa-star {
+        padding: 0;
+        text-align: left;
+        margin-top: 1vw;
+        font-size: 2vw;
+        }
+
+        .fa-star-half-o {
+        padding: 0;
+        text-align: left;
+        margin-top: 1vw;
+        font-size: 2vw;
+        }
+
+        .fa-star-o {
+        padding: 0;
+        text-align: left;
+        margin-top: 1vw;
+        font-size: 2vw;
+        color: orange;
+        }
+
+        .fa-star:hover {
+        opacity: 1;
+        }
+
+        .mix {
+        padding: 1vw;
+        font-size: 3vw;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 30%;
+        }
+
+        .fa-facebook:hover {
+        opacity: 0.7;
+        }
+
+        .fa-instagram:hover {
+        opacity: 0.7;
+        }
+
+        .fa-pinterest:hover {
+        opacity: 0.7;
+        }
+
+        img.cas {
+        border-radius: 30px;
+        }
+
+        .top {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        }
+
+        .top h2 {
+        font-size: 1.7vw;
+        font-family: Verdana, sans-serif;
+        color: #FFC300;
+        margin-top: 3vw;
+        margin-bottom: 1vw;
+        margin-left: 3vw;
+        text-align: left;
+        }
+
+        .top h1 {
+        font-size: 1.5vw;
+        font-family: 'Varela Round';
+        color: #FFE99F;
+        margin: 1vw;
+        margin-left: 3vw;
+        text-align: left;
+        }
+
+        .bottom-right h1 {
+        font-size: 1.5vw;
+        font-family: 'Varela Round';
+        color: #FFE99F;
+        margin: 1vw;
+        margin-right: 3vw;
+        text-align: right;
+
+        }
+
+        .yowaimo {
+        font-size: 1.5vw;
+        text-align: center;
+        color: #f1f1f1;
+        font-family: 'Varela Round';
+        }
+
+        .ger {
+        border-left: 1.5vw solid #9BC582;
+        margin-left: 3vw;
+        }
+
+        .checked {
+        color: orange;
+        }
+
+        .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        }
+
+        .button {
+        border: none;
+        color: #403100;
+        width: 10vw;
+        height: 3vw;
+        text-align: center;
+        display: inline-block;
+        font-size: 2vw;
+        transition-duration: 0.1s;
+        background-color: #FFD240; 
+        color: black; 
+        border-radius: 16px;
+        font-family: 'Varela Round';
+        padding: 0.5vw;
+        }
+
+        .button:hover {
+        color: white;
+        }
+
+        .bottom {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .bottom h1 {
+        font-size: 2vw;
+        font-family: 'Varela Round';
+        color: white;
+        margin-bottom: 3vw;
+        text-align: center;
+        }
+
+        #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        margin: -76px 0 0 -76px;
+        border: 16px solid #f1f1f1;
+        border-radius: 50%;
+        border-top: 16px solid #FFC300;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+        /* Add animation to "page content" */
+        .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+        from { bottom:-100px; opacity:0 } 
+        to { bottom:0px; opacity:1 }
+        }
+
+        @keyframes animatebottom { 
+        from{ bottom:-100px; opacity:0 } 
+        to{ bottom:0; opacity:1 }
+        }
+
+        #myDiv {
+        display: none;
+        text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+    
+    <!-- by NOAH DE BELEN of 9-SAMAT -->
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+
+        <div id="mySidenav" class="sidenav" style="text-align: left;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="html Restaurant Homepage.html"><i class="fa fa-home" style="font-size: 2vw;"></i>ホームページ</a>
+        <a href="html Restaurant Menu.html"><i class="fa fa-folder" style="font-size: 2vw;"></i>Menu (˶ᵔ ᵕ ᵔ˶)</a>
+        <a href="html Restaurant Clients.html"><i class="fa fa-heart" style="font-size: 2vw;"></i>Clients (˘▾˘)</a>
+        <a href="html Restaurant Feedback.html"><i class="fa fa-pencil" style="font-size: 2vw;"></i>Feedback (*^.^*)</a>
+    </div>
+      
+
+    <div class="container">
+        <img src="images/pexels-karolina-grabowska-8547533.jpg" style="width: 100%;" class="cas">
+        <div class="centered" font-size-adjust: 3;><h3>Your 感謝</h3><h6 style="font-size: 6.3vw;">正直 FEEDBACK</h6></div>
+        <div class="top-left"><span style="cursor:pointer" onclick="openNav()">&#9776; 開ける</span></div>
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "300px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+        var myVar;
+
+        function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+        }
+
+    </script>
+
+    <hr style="margin: 2vw;">
+
+    <div class="container">
+        <img src="images/smol.jpg" style="width: 100%;" class="cas">
+        <div class="top-left"><span style="cursor:pointer" onclick="openNav()">&#9776; 開ける</span></div>
+        <div class="top" font-size-adjust: 3;>
+            <div class="ger">
+                <h2 style="font-size: 3vw; margin-bottom: 0;">INPUT YOUR REVIEW インプットレビュー!</h2>
+                <h1 style="font-size: 1.5vw; margin-top: 0;">We'd really appreciate it ありがとう! (っ ˘ ڡ ˘ ς)</h1>
+            </div>
+            <div class="ger">
+                <br><br><h2 style="margin-top: 0;">ENTER 寿司かわいい食べ物レビュー : ( ˘▽˘)っ♨</h2>
+                <h1><form action="/action_page.php">
+                    <label for="fname">Name 名前! : </label>
+                    <input type="text" style="width: 15vw; height: 3vw; border-radius: 16px;" id="name" name="name"><br><br>
+                    <label for="lname">Review レビュー! : </label>
+                    <input type="text" style="width: 50vw; height: 3vw; border-radius: 16px;" id="review" name="review"><br><br>
+                    <a href="html Restaurant Thanks.html"><div class="button">Submit</div></a>
+                    </form><br>
+                </h1>
+            </div>
+        </div>
+        <div class="bottom">
+            <h1 style="color: #f1f1f1;"><br><br><br><br><br><br><br><br><br><br><br><br><br>(* ￣ ▽ ￣ )旦 且(´ ∀ ` *)</h1>
+        </div>
+        <div class="top-left"><span style="cursor:pointer" onclick="openNav()">&#9776; 開ける</span></div>
+    </div>
+
+    <hr style="margin: 2vw; margin-bottom: 0;">
+
+<h1 class="yowaimo">Σ>―(〃°ω°〃)♡→<br>⟟ 位置 : Shibuya City, Tokyo, Japan<br>問い合わせ : sushkawaiii@gmail.com<br>電話番号 : #1357-924-6802</h1>
+    
+<div class="yowaimo">
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-pinterest"></a>
+    <a href="#" class="fa fa-facebook"></a>
+</div>
+
+</body>
+
+</html>
